@@ -49,11 +49,12 @@ const Home = () => {
   const handleLogout = () => {
     localStorage.removeItem('token');
     setIsLoggedIn(false);
-    navigate('/login'); // Redirect to login page
+    navigate('/login'); 
   };
 
   return (
     <div className="container mx-auto p-4">
+
       {/* Header with login/logout button */}
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-3xl font-bold text-center">Tasks</h1>
@@ -115,7 +116,7 @@ const Home = () => {
             ))}
           </ul>
         ) : (
-          <p className="text-center text-gray-500">No tasks available. Add a new task above.</p>
+          <p className="text-center text-gray-500"></p>
         )}
       </div>
     </div>
