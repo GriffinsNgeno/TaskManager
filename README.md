@@ -30,9 +30,8 @@ To set up the backend, follow these steps:
 
 Clone the repository:
        
-       git clone https://github.com/GriffinsNgeno/TaskManager.git
-
-                    
+    git clone https://github.com/GriffinsNgeno/TaskManager.git
+                
 ### Install dependencies:
 
     cd ../backend
@@ -73,4 +72,3 @@ Clone the repository:
 
 ## Conclusion
 The Task Manager program is a powerful tool that allows users to easily manage their chores and increase productivity. By combining a user-friendly UI with a robust backend, the application provides a full task management solution. Users may simply add, view, amend, and delete tasks while navigating a smooth and responsive interface.
-
