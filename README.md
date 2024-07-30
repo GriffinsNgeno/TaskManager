@@ -1,8 +1,12 @@
-# TaskManager
+# Task Manager
+The Task Manager is a web application that allows users to manage their tasks, featuring user authentication, task management, and a responsive UI.
 
-## Overview
+##  Links
+- [LIve link](https://task-manager-rho-six.vercel.app/)
 
-The Task Manager is a web application designed to help users manage their tasks efficiently. It features user authentication, task creation, viewing, updating, and deletion functionalities.
+
+## Frontend
+The frontend is a responsive web application optimized for both desktop and mobile devices. It uses React, React Router, Axios, Tailwindcss, and Font Awesome to provide the following functionalities to the users:
 
 ## Features
 
@@ -11,37 +15,62 @@ The Task Manager is a web application designed to help users manage their tasks 
 - Add, edit, and delete tasks
 - Mark tasks as complete or incomplete
 
-## Project Setup
 
-### Prerequisites
+## Backend
+The backend is built with Python and uses SQLite as the database. It provides several API endpoints that the frontend uses to retrieve and manipulate data. The models used in the backend are:
 
-- **Node.js and npm**: Ensure you have Node.js and npm installed. You can download them from [nodejs.org](https://nodejs.org/).
-- **Python**: Version 3.8 or above.
-- **Django**: Version 3.2 or above.
-- **Django REST Framework**: Version 3.12 or above.
-- **PostgreSQL** or **SQLite**: For database management.
+- GET /tasks/ - Retrieve all tasks.
+- POST /tasks/ - Create a new task.
+- GET /tasks/<id>/ - Retrieve a specific task.
+- PATCH /tasks/<id>/ - Update a task.
+- DELETE /tasks/<id>/ - Delete a task.
 
-### Clone the Repository
+### Setup
+To set up the backend, follow these steps:
 
-Clone the repository to your local machine using Git:
+Clone the repository:
+       
+       git clone https://github.com/GriffinsNgeno/TaskManager.git
 
-```bash
-git clone https://github.com/GriffinsNgeno/TaskManager.git
+                    
+### Install dependencies:
 
-### Frontend Setup
+    cd ../backend
+    pip install -r requirements.txt
 
-cd frontend
-npm install
+### Create and migrate the database:
 
-## Backend Setup
+   python manage.py migrate
 
-cd backend
-pip install -r requirements.txt
+### Create Superuser
 
-## Database Setup
+    python manage.py createsuperuser
 
-cd backend
-python manage.py migrate
+### Start the server:
 
+   python manage.py runserver
 
+## To set up the frontend, follow these steps:
+#### Clone the repository:
+
+    https://github.com/GriffinsNgeno/TaskManager.git
+
+#### Install dependencies:
+
+    cd ../frontend
+    npm install
+
+#### Start the development server:
+
+    npm start
+
+#### Build the production version:
+
+    npm run build
+
+## Authors
+- Griffins Ngeno (`https://github.com/GriffinsNgeno`)
+
+## Conclusion
+The Task Manager program is a powerful tool that allows users to easily manage their chores and increase productivity. By combining a user-friendly UI with a robust backend, the application provides a full task management solution. Users may simply add, view, amend, and delete tasks while navigating a smooth and responsive interface.
 
