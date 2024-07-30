@@ -7,6 +7,7 @@ const TaskDetails = () => {
   const [task, setTask] = useState(null);
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
+  const [updateMessage, setUpdateMessage] = useState('');
 
   useEffect(() => {
     const fetchTask = async () => {
@@ -26,9 +27,16 @@ const TaskDetails = () => {
     try {
       await api.patch(`tasks/${id}/`, { title, description });
       setTask({ ...task, title, description });
+      setUpdateMessage('Task updated successfully!');
     } catch (error) {
       console.error('Error updating task:', error);
+      setUpdateMessage('Error updating task.');
     }
+
+    // To remove the message after 3 seconds
+    setTimeout(() => {
+      setUpdateMessage('');
+    }, 3000);
   };
 
   return (
@@ -51,6 +59,9 @@ const TaskDetails = () => {
           <button onClick={handleUpdateTask} className="btn">
             Update Task
           </button>
+          {updateMessage && (
+            <p className="mt-4 text-green-500">{updateMessage}</p>
+          )}
         </div>
       ) : (
         <p>Loading...</p>
