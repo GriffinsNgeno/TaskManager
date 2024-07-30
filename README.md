@@ -2,7 +2,7 @@
 The Task Manager is a web application that allows users to manage their tasks, featuring user authentication, task management, and a responsive UI.
 
 ##  Links
-- [LIve link](https://task-manager-rho-six.vercel.app/)
+- [Live link](https://task-manager-rho-six.vercel.app/)
 
 
 ## Frontend
